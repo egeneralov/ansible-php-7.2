@@ -1,6 +1,6 @@
 ---
 
-- include_tasks: "{{ yml_file }}"
+- include_tasks: "{{ yml_file }}.yml"
   with_items:
     - install-php
     - pecl
