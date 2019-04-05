@@ -4,7 +4,7 @@
   uri:
     url: "https://getcomposer.org/versions"
     return_content: yes
-  register: json_response                                                                                    
+  register: json_response
 
 - name: "composer: get version"
   debug:

@@ -24,6 +24,6 @@
   with_items:
     - install-php
     - pecl
-    - composer  
+    - composer
   loop_control:
     loop_var: yml_file
