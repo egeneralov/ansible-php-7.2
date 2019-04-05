@@ -8,7 +8,6 @@
     - { "n": "amqp", "l": "amqp" }
     - { "n": "raphf", "l": "raphf" }
     - { "n": "propro", "l": "propro" }
-#     - { "n": "pecl_http", "l": "http" }
 
 - name: Add extensions to autoload
   lineinfile:
@@ -20,4 +19,3 @@
     - amqp
     - raphf
     - propro
-#     - http

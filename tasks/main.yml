@@ -7,3 +7,18 @@
     - composer
   loop_control:
     loop_var: yml_file
+
+- name: php.ini
+  lineinfile:
+    path: "/etc/php/7.2/fpm/php.ini"
+    regexp: ';?{{ item.k }} =.*'
+    line: '{{ item.k }} = {{ item.v }}'
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ php_ini }}"
+  register: php_ini_result
+
+- name: Restart php-fpm
+  systemd:
+    name: "php7.2-fpm.service"
+    state: restarted
+  when: php_ini_result is changed
