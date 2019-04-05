@@ -18,5 +18,6 @@
 
 - name: "composer: download"
   get_url:
-    src: "https://getcomposer.org{{ ( json_response.content | from_json )['stable'][0]['path'] }}"
+    url: "https://getcomposer.org{{ ( json_response.content | from_json )['stable'][0]['path'] }}"
     dest: /usr/local/sbin/composer
+    remote_src: yes

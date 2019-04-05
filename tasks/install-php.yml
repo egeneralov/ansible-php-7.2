@@ -4,30 +4,29 @@
   apt:
     update_cache: yes
     cache_valid_time: 360
-    name: "{{ item }}"
-  with_items:
-    - unzip
-    - curl
-    - gnupg2
-    - apt-transport-https
-    - libgnutls28-dev
-    - zlib1g-dev
-    - libevent-dev
-    - libicu-dev
-    - libidn2-0-dev
-    - libidn11-dev
-    - librabbitmq-dev
-    - libcurl4-gnutls-dev
-    - libgnutls28-dev
+    name:
+      - unzip
+      - curl
+      - gnupg2
+      - apt-transport-https
+      - libgnutls28-dev
+      - zlib1g-dev
+      - libevent-dev
+      - libicu-dev
+      - libidn2-0-dev
+      - libidn11-dev
+      - librabbitmq-dev
+      - libcurl4-gnutls-dev
+      - libgnutls28-dev
 
 - name: Import repo key
   apt_key:
-    url: https://packages.sury.org/php/apt.gpg
+    url: "https://packages.sury.org/php/apt.gpg"
   register: php_repo_key
 
 - name: Add apt repository
   apt_repository:
-    repo: deb https://packages.sury.org/php/ stretch main
+    repo: "deb https://packages.sury.org/php/ stretch main"
   register: php_repo
 
 - name: Update apt cache
