@@ -1,25 +1,14 @@
 ---
 
-- name: pecl install amqp
-  shell: pecl install amqp
+- name: pecl install
+  shell: "pecl install {{ item.n }}"
   args:
-    creates: "/usr/lib/php/20170718/amqp.so"
-
-- name: pecl install raphf
-  shell: pecl install raphf
-  args:
-    creates: "/usr/lib/php/20170718/raphf.so"
-
-- name: pecl install propro
-  shell: pecl install propro
-  args:
-    creates: "/usr/lib/php/20170718/propro.so"
-
-- name: pecl install pecl_http
-  shell: pecl install pecl_http
-  args:
-    creates: "/usr/lib/php/20170718/http.so"
-
+    creates: "/usr/lib/php/20170718/{{ item.l | default item.n }}.so"
+  with_items:
+    - { "n": "amqp", "l": "amqp" }
+    - { "n": "raphf", "l": "raphf" }
+    - { "n": "propro", "l": "propro" }
+    - { "n": "pecl_http", "l": "http" }
 
 - name: Add extensions to autoload
   lineinfile:
