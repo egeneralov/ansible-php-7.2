@@ -87,10 +87,26 @@
     - propro
     - http
 
+- name: "composer: get json"
+  uri:
+    url: "https://getcomposer.org/versions"
+    return_content: yes
+  register: json_response                                                                                    
 
-- shell: curl -sL https://getcomposer.org/installer | php -- --install-dir=/usr/local/sbin --filename=composer --no-ansi
-  args:
-    creates: /usr/local/sbin/composer
+- name: "composer: get version"
+  debug:
+    msg: "Version: {{ ( json_response.content | from_json )['stable'][0]['version'] }}"
+  when: ( json_response.content | from_json )['stable'][0]['version'] is defined
+
+- name: "composer: get url"
+  debug:
+    msg: "URL: https://getcomposer.org{{ ( json_response.content | from_json )['stable'][0]['path'] }}"
+  when: ( json_response.content | from_json )['stable'][0]['path'] is defined
+
+- name: "composer: download"
+  get_url:
+    src: "https://getcomposer.org{{ ( json_response.content | from_json )['stable'][0]['path'] }}"
+    dest: /usr/local/sbin/composer
 
 - shell: pecl install amqp
   args:
