@@ -1,338 +1,389 @@
 ---
 # defaults file for .
 
-php_ini:
-  - { "k": "engine", "v": "On" }
-  - { "k": "short_open_tag", "v": "Off" }
-  - { "k": "precision", "v": "14" }
-  - { "k": "output_buffering", "v": "4096" }
-  - { "k": "zlib.output_compression", "v": "Off" }
-  - { "k": "implicit_flush", "v": "Off" }
-  - { "k": "serialize_precision", "v": "-1" }
-  - { "k": "disable_functions", "v": "pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals," }
-  - { "k": "zend.enable_gc", "v": "On" }
-  - { "k": "expose_php", "v": "Off" }
-  - { "k": "max_execution_time", "v": "30" }
-  - { "k": "max_input_time", "v": "60" }
-  - { "k": "memory_limit", "v": "128M" }
-  - { "k": "error_reporting", "v": "E_ALL" }
-  - { "k": "display_errors", "v": "Off" }
-  - { "k": "display_startup_errors", "v": "Off" }
-  - { "k": "log_errors", "v": "On" }
-  - { "k": "log_errors_max_len", "v": "1024" }
-  - { "k": "ignore_repeated_errors", "v": "Off" }
-  - { "k": "ignore_repeated_source", "v": "Off" }
-  - { "k": "report_memleaks", "v": "On" }
-  - { "k": "html_errors", "v": "On" }
-  - { "k": "register_argc_argv", "v": "Off" }
-  - { "k": "auto_globals_jit", "v": "On" }
-  - { "k": "post_max_size", "v": "8M" }
-  - { "k": "enable_dl", "v": "Off" }
-  - { "k": "file_uploads", "v": "On" }
-  - { "k": "upload_max_filesize", "v": "2M" }
-  - { "k": "max_file_uploads", "v": "20" }
-  - { "k": "allow_url_fopen", "v": "On" }
-  - { "k": "allow_url_include", "v": "Off" }
-  - { "k": "default_socket_timeout", "v": "60" }
-  - { "k": "cli_server.color", "v": "On" }
-  - { "k": "pdo_mysql.cache_size", "v": "2000" }
-  - { "k": "SMTP", "v": "localhost" }
-  - { "k": "smtp_port", "v": "25" }
-  - { "k": "mail.add_x_header", "v": "Off" }
-  - { "k": "odbc.allow_persistent", "v": "On" }
-  - { "k": "odbc.check_persistent", "v": "On" }
-  - { "k": "odbc.max_persistent", "v": "-1" }
-  - { "k": "odbc.max_links", "v": "-1" }
-  - { "k": "odbc.defaultlrl", "v": "4096" }
-  - { "k": "odbc.defaultbinmode", "v": "1" }
-  - { "k": "ibase.allow_persistent", "v": "1" }
-  - { "k": "ibase.max_persistent", "v": "-1" }
-  - { "k": "ibase.max_links", "v": "-1" }
-  - { "k": "mysqli.max_persistent", "v": "-1" }
-  - { "k": "mysqli.allow_persistent", "v": "On" }
-  - { "k": "mysqli.max_links", "v": "-1" }
-  - { "k": "mysqli.cache_size", "v": "2000" }
-  - { "k": "mysqli.default_port", "v": "3306" }
-  - { "k": "mysqli.reconnect", "v": "Off" }
-  - { "k": "mysqlnd.collect_statistics", "v": "On" }
-  - { "k": "mysqlnd.collect_memory_statistics", "v": "Off" }
-  - { "k": "pgsql.allow_persistent", "v": "On" }
-  - { "k": "pgsql.auto_reset_persistent", "v": "Off" }
-  - { "k": "pgsql.max_persistent", "v": "-1" }
-  - { "k": "pgsql.max_links", "v": "-1" }
-  - { "k": "pgsql.ignore_notice", "v": "0" }
-  - { "k": "pgsql.log_notice", "v": "0" }
-  - { "k": "bcmath.scale", "v": "0" }
-  - { "k": "session.save_handler", "v": "files" }
-  - { "k": "session.use_strict_mode", "v": "0" }
-  - { "k": "session.use_cookies", "v": "1" }
-  - { "k": "session.use_only_cookies", "v": "1" }
-  - { "k": "session.name", "v": "PHPSESSID" }
-  - { "k": "session.auto_start", "v": "0" }
-  - { "k": "session.cookie_lifetime", "v": "0" }
-  - { "k": "session.cookie_path", "v": "/" }
-  - { "k": "session.serialize_handler", "v": "php" }
-  - { "k": "session.gc_probability", "v": "0" }
-  - { "k": "session.gc_divisor", "v": "1000" }
-  - { "k": "session.gc_maxlifetime", "v": "1440" }
-  - { "k": "session.cache_limiter", "v": "nocache" }
-  - { "k": "session.cache_expire", "v": "180" }
-  - { "k": "session.use_trans_sid", "v": "0" }
-  - { "k": "session.sid_length", "v": "26" }
-  - { "k": "session.sid_bits_per_character", "v": "5" }
-  - { "k": "zend.assertions", "v": "-1" }
-  - { "k": "tidy.clean_output", "v": "Off" }
-  - { "k": "soap.wsdl_cache_limit", "v": "5" }
-  - { "k": "ldap.max_links", "v": "-1" }
+php_ini: []
+
+#### DEFAULT VALUES
+
+#   - { "k": "engine", "v": "On" }
+#   - { "k": "short_open_tag", "v": "Off" }
+#   - { "k": "precision", "v": "14" }
+#   - { "k": "output_buffering", "v": "4096" }
+#   - { "k": "zlib.output_compression", "v": "Off" }
+#   - { "k": "implicit_flush", "v": "Off" }
+#   - { "k": "serialize_precision", "v": "-1" }
+#   - { "k": "disable_functions", "v": "pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_get_handler,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,pcntl_async_signals," }
+#   - { "k": "zend.enable_gc", "v": "On" }
+#   - { "k": "expose_php", "v": "Off" }
+#   - { "k": "max_execution_time", "v": "30" }
+#   - { "k": "max_input_time", "v": "60" }
+#   - { "k": "memory_limit", "v": "128M" }
+#   - { "k": "error_reporting", "v": "E_ALL" }
+#   - { "k": "display_errors", "v": "Off" }
+#   - { "k": "display_startup_errors", "v": "Off" }
+#   - { "k": "log_errors", "v": "On" }
+#   - { "k": "log_errors_max_len", "v": "1024" }
+#   - { "k": "ignore_repeated_errors", "v": "Off" }
+#   - { "k": "ignore_repeated_source", "v": "Off" }
+#   - { "k": "report_memleaks", "v": "On" }
+#   - { "k": "html_errors", "v": "On" }
+#   - { "k": "register_argc_argv", "v": "Off" }
+#   - { "k": "auto_globals_jit", "v": "On" }
+#   - { "k": "post_max_size", "v": "8M" }
+#   - { "k": "enable_dl", "v": "Off" }
+#   - { "k": "file_uploads", "v": "On" }
+#   - { "k": "upload_max_filesize", "v": "2M" }
+#   - { "k": "max_file_uploads", "v": "20" }
+#   - { "k": "allow_url_fopen", "v": "On" }
+#   - { "k": "allow_url_include", "v": "Off" }
+#   - { "k": "default_socket_timeout", "v": "60" }
+#   - { "k": "cli_server.color", "v": "On" }
+#   - { "k": "pdo_mysql.cache_size", "v": "2000" }
+#   - { "k": "SMTP", "v": "localhost" }
+#   - { "k": "smtp_port", "v": "25" }
+#   - { "k": "mail.add_x_header", "v": "Off" }
+#   - { "k": "odbc.allow_persistent", "v": "On" }
+#   - { "k": "odbc.check_persistent", "v": "On" }
+#   - { "k": "odbc.max_persistent", "v": "-1" }
+#   - { "k": "odbc.max_links", "v": "-1" }
+#   - { "k": "odbc.defaultlrl", "v": "4096" }
+#   - { "k": "odbc.defaultbinmode", "v": "1" }
+#   - { "k": "ibase.allow_persistent", "v": "1" }
+#   - { "k": "ibase.max_persistent", "v": "-1" }
+#   - { "k": "ibase.max_links", "v": "-1" }
+#   - { "k": "mysqli.max_persistent", "v": "-1" }
+#   - { "k": "mysqli.allow_persistent", "v": "On" }
+#   - { "k": "mysqli.max_links", "v": "-1" }
+#   - { "k": "mysqli.cache_size", "v": "2000" }
+#   - { "k": "mysqli.default_port", "v": "3306" }
+#   - { "k": "mysqli.reconnect", "v": "Off" }
+#   - { "k": "mysqlnd.collect_statistics", "v": "On" }
+#   - { "k": "mysqlnd.collect_memory_statistics", "v": "Off" }
+#   - { "k": "pgsql.allow_persistent", "v": "On" }
+#   - { "k": "pgsql.auto_reset_persistent", "v": "Off" }
+#   - { "k": "pgsql.max_persistent", "v": "-1" }
+#   - { "k": "pgsql.max_links", "v": "-1" }
+#   - { "k": "pgsql.ignore_notice", "v": "0" }
+#   - { "k": "pgsql.log_notice", "v": "0" }
+#   - { "k": "bcmath.scale", "v": "0" }
+#   - { "k": "session.save_handler", "v": "files" }
+#   - { "k": "session.use_strict_mode", "v": "0" }
+#   - { "k": "session.use_cookies", "v": "1" }
+#   - { "k": "session.use_only_cookies", "v": "1" }
+#   - { "k": "session.name", "v": "PHPSESSID" }
+#   - { "k": "session.auto_start", "v": "0" }
+#   - { "k": "session.cookie_lifetime", "v": "0" }
+#   - { "k": "session.cookie_path", "v": "/" }
+#   - { "k": "session.serialize_handler", "v": "php" }
+#   - { "k": "session.gc_probability", "v": "0" }
+#   - { "k": "session.gc_divisor", "v": "1000" }
+#   - { "k": "session.gc_maxlifetime", "v": "1440" }
+#   - { "k": "session.cache_limiter", "v": "nocache" }
+#   - { "k": "session.cache_expire", "v": "180" }
+#   - { "k": "session.use_trans_sid", "v": "0" }
+#   - { "k": "session.sid_length", "v": "26" }
+#   - { "k": "session.sid_bits_per_character", "v": "5" }
+#   - { "k": "zend.assertions", "v": "-1" }
+#   - { "k": "tidy.clean_output", "v": "Off" }
+#   - { "k": "soap.wsdl_cache_limit", "v": "5" }
+#   - { "k": "ldap.max_links", "v": "-1" }
+# 
+# #### COMMENTED BY DEFAULT VALUES
+# 
+# #   - { "k": "unserialize_callback_func", "v": "" }
+# #   - { "k": "disable_classes", "v": "" }
+# #   - { "k": "variables_order", "v": ""GPCS"" }
+# #   - { "k": "request_order", "v": ""GP"" }
+# #   - { "k": "auto_prepend_file", "v": "" }
+# #   - { "k": "auto_append_file", "v": "" }
+# #   - { "k": "default_mimetype", "v": ""text/html"" }
+# #   - { "k": "default_charset", "v": ""UTF-8"" }
+# #   - { "k": "doc_root", "v": "" }
+# #   - { "k": "user_dir", "v": "" }
+# #   - { "k": "pdo_mysql.default_socket=", "v": "" }
+# #   - { "k": "ibase.timestampformat", "v": ""%Y-%m-%d" }
+# #   - { "k": "ibase.dateformat", "v": ""%Y-%m-%d"" }
+# #   - { "k": "ibase.timeformat", "v": ""%H:%M:%S"" }
+# #   - { "k": "mysqli.default_socket", "v": "" }
+# #   - { "k": "mysqli.default_host", "v": "" }
+# #   - { "k": "mysqli.default_user", "v": "" }
+# #   - { "k": "mysqli.default_pw", "v": "" }
+# #   - { "k": "session.cookie_domain", "v": "" }
+# #   - { "k": "session.cookie_httponly", "v": "" }
+# #   - { "k": "session.referer_check", "v": "" }
+# #   - { "k": "session.trans_sid_tags", "v": ""a=href,area=href,frame=src,form="" }
+# #   - { "k": "soap.wsdl_cache_enabled=1", "v": "" }
+# #   - { "k": "soap.wsdl_cache_dir="/tmp"", "v": "" }
+# #   - { "k": "soap.wsdl_cache_ttl=86400", "v": "" }
+# 
+# 
+# #   - { "k": "user_ini.filename", "v": "".user.ini"" }
+# #   - { "k": "user_ini.filename", "v": "" }
+# #   - { "k": "user_ini.cache_ttl", "v": "300" }
+# #   - { "k": "output_handler", "v": "" }
+# #   - { "k": "url_rewriter.tags", "v": "" }
+# #   - { "k": "url_rewriter.hosts", "v": "" }
+# #   - { "k": "zlib.output_compression_level", "v": "-1" }
+# #   - { "k": "zlib.output_handler", "v": "" }
+# #   - { "k": "open_basedir", "v": "" }
+# #   - { "k": "highlight.string", "v": "#DD0000" }
+# #   - { "k": "highlight.comment", "v": "#FF9900" }
+# #   - { "k": "highlight.keyword", "v": "#007700" }
+# #   - { "k": "highlight.default", "v": "#0000BB" }
+# #   - { "k": "highlight.html", "v": "#000000" }
+# #   - { "k": "ignore_user_abort", "v": "On" }
+# #   - { "k": "realpath_cache_size", "v": "4096k" }
+# #   - { "k": "realpath_cache_ttl", "v": "120" }
+# #   - { "k": "zend.multibyte", "v": "Off" }
+# #   - { "k": "zend.script_encoding", "v": "" }
+# #   - { "k": "max_input_nesting_level", "v": "64" }
+# #   - { "k": "report_zend_debug", "v": "0" }
+# #   - { "k": "track_errors", "v": "Off" }
+# #   - { "k": "xmlrpc_errors", "v": "0" }
+# #   - { "k": "xmlrpc_error_number", "v": "0" }
+# #   - { "k": "docref_root", "v": ""/phpmanual/"" }
+# #   - { "k": "docref_ext", "v": ".html" }
+# #   - { "k": "error_prepend_string", "v": ""<span" }
+# #   - { "k": "error_append_string", "v": ""</span>"" }
+# #   - { "k": "error_log", "v": "php_errors.log" }
+# #   - { "k": "error_log", "v": "syslog" }
+# #   - { "k": "windows.show_crt_warning", "v": "" }
+# #   - { "k": "arg_separator.output", "v": ""&amp;"" }
+# #   - { "k": "arg_separator.input", "v": "";&"" }
+# #   - { "k": "enable_post_data_reading", "v": "Off" }
+# #   - { "k": "internal_encoding", "v": "" }
+# #   - { "k": "input_encoding", "v": "" }
+# #   - { "k": "output_encoding", "v": "" }
+# #   - { "k": "include_path", "v": "".:/usr/share/php"" }
+# #   - { "k": "include_path", "v": "".;c:\php\includes"" }
+# #   - { "k": "cgi.force_redirect", "v": "1" }
+# #   - { "k": "cgi.nph", "v": "1" }
+# #   - { "k": "cgi.redirect_status_env", "v": "" }
+# #   - { "k": "cgi.fix_pathinfo=1", "v": "" }
+# #   - { "k": "cgi.discard_path=1", "v": "" }
+# #   - { "k": "fastcgi.impersonate", "v": "1" }
+# #   - { "k": "fastcgi.logging", "v": "0" }
+# #   - { "k": "cgi.rfc2616_headers", "v": "0" }
+# #   - { "k": "cgi.check_shebang_line=1", "v": "" }
+# #   - { "k": "upload_tmp_dir", "v": "" }
+# #   - { "k": "from="john@doe.com"", "v": "" }
+# #   - { "k": "user_agent="PHP"", "v": "" }
+# #   - { "k": "auto_detect_line_endings", "v": "Off" }
+# #   - { "k": "extension=bz2", "v": "" }
+# #   - { "k": "extension=curl", "v": "" }
+# #   - { "k": "extension=fileinfo", "v": "" }
+# #   - { "k": "extension=gd2", "v": "" }
+# #   - { "k": "extension=gettext", "v": "" }
+# #   - { "k": "extension=gmp", "v": "" }
+# #   - { "k": "extension=intl", "v": "" }
+# #   - { "k": "extension=imap", "v": "" }
+# #   - { "k": "extension=interbase", "v": "" }
+# #   - { "k": "extension=ldap", "v": "" }
+# #   - { "k": "extension=mbstring", "v": "" }
+# #   - { "k": "extension=exif", "v": "Must" }
+# #   - { "k": "extension=mysqli", "v": "" }
+# #   - { "k": "extension=oci8_12c", "v": "Use" }
+# #   - { "k": "extension=odbc", "v": "" }
+# #   - { "k": "extension=openssl", "v": "" }
+# #   - { "k": "extension=pdo_firebird", "v": "" }
+# #   - { "k": "extension=pdo_mysql", "v": "" }
+# #   - { "k": "extension=pdo_oci", "v": "" }
+# #   - { "k": "extension=pdo_odbc", "v": "" }
+# #   - { "k": "extension=pdo_pgsql", "v": "" }
+# #   - { "k": "extension=pdo_sqlite", "v": "" }
+# #   - { "k": "extension=pgsql", "v": "" }
+# #   - { "k": "extension=shmop", "v": "" }
+# #   - { "k": "extension=snmp", "v": "" }
+# #   - { "k": "extension=soap", "v": "" }
+# #   - { "k": "extension=sockets", "v": "" }
+# #   - { "k": "extension=sqlite3", "v": "" }
+# #   - { "k": "extension=tidy", "v": "" }
+# #   - { "k": "extension=xmlrpc", "v": "" }
+# #   - { "k": "extension=xsl", "v": "" }
+# #   - { "k": "date.timezone", "v": "" }
+# #   - { "k": "date.default_latitude", "v": "31.7667" }
+# #   - { "k": "date.default_longitude", "v": "35.2333" }
+# #   - { "k": "date.sunrise_zenith", "v": "90.583333" }
+# #   - { "k": "date.sunset_zenith", "v": "90.583333" }
+# #   - { "k": "filter.default", "v": "unsafe_raw" }
+# #   - { "k": "filter.default_flags", "v": "" }
+# #   - { "k": "iconv.input_encoding", "v": "" }
+# #   - { "k": "iconv.internal_encoding", "v": "" }
+# #   - { "k": "iconv.output_encoding", "v": "" }
+# #   - { "k": "imap.enable_insecure_rsh=0", "v": "" }
+# #   - { "k": "intl.default_locale", "v": "" }
+# #   - { "k": "intl.error_level", "v": "E_WARNING" }
+# #   - { "k": "intl.use_exceptions", "v": "0" }
+# #   - { "k": "sqlite3.extension_dir", "v": "" }
+# #   - { "k": "PCRE", "v": "backtracking" }
+# #   - { "k": "pcre.backtrack_limit=100000", "v": "" }
+# #   - { "k": "PCRE", "v": "recursion" }
+# #   - { "k": "Please", "v": "that" }
+# #   - { "k": "the", "v": "process" }
+# #   - { "k": "stack", "v": "limit" }
+# #   - { "k": "pcre.recursion_limit=100000", "v": "" }
+# #   - { "k": "Enables", "v": "disables" }
+# #   - { "k": "library", "v": "be" }
+# #   - { "k": "pcre.jit=1", "v": "" }
+# #   - { "k": "pdo_odbc.connection_pooling=strict", "v": "" }
+# #   - { "k": "pdo_odbc.db2_instance_name", "v": "" }
+# #   - { "k": "phar.readonly", "v": "On" }
+# #   - { "k": "phar.require_hash", "v": "On" }
+# #   - { "k": "phar.cache_list", "v": "" }
+# #   - { "k": "sendmail_from", "v": "me@example.com" }
+# #   - { "k": "sendmail_path", "v": "" }
+# #   - { "k": "mail.force_extra_parameters", "v": "" }
+# #   - { "k": "mail.log", "v": "" }
+# #   - { "k": "mail.log", "v": "syslog" }
+# #   - { "k": "odbc.default_db", "v": "Not" }
+# #   - { "k": "odbc.default_user", "v": "Not" }
+# #   - { "k": "odbc.default_pw", "v": "Not" }
+# #   - { "k": "odbc.default_cursortype", "v": "" }
+# #   - { "k": "birdstep.max_links", "v": "-1" }
+# #   - { "k": "ibase.default_db", "v": "" }
+# #   - { "k": "ibase.default_user", "v": "" }
+# #   - { "k": "ibase.default_password", "v": "" }
+# #   - { "k": "ibase.default_charset", "v": "" }
+# #   - { "k": "mysqli.allow_local_infile", "v": "On" }
+# #   - { "k": "mysqlnd.debug", "v": "" }
+# #   - { "k": "mysqlnd.log_mask", "v": "0" }
+# #   - { "k": "mysqlnd.mempool_default_size", "v": "16000" }
+# #   - { "k": "mysqlnd.net_cmd_buffer_size", "v": "2048" }
+# #   - { "k": "mysqlnd.net_read_buffer_size", "v": "32768" }
+# #   - { "k": "mysqlnd.net_read_timeout", "v": "31536000" }
+# #   - { "k": "mysqlnd.sha256_server_public_key", "v": "" }
+# #   - { "k": "oci8.privileged_connect", "v": "Off" }
+# #   - { "k": "oci8.max_persistent", "v": "-1" }
+# #   - { "k": "oci8.persistent_timeout", "v": "-1" }
+# #   - { "k": "oci8.ping_interval", "v": "60" }
+# #   - { "k": "oci8.connection_class", "v": "" }
+# #   - { "k": "oci8.events", "v": "Off" }
+# #   - { "k": "oci8.statement_cache_size", "v": "20" }
+# #   - { "k": "oci8.default_prefetch", "v": "100" }
+# #   - { "k": "oci8.old_oci_close_semantics", "v": "Off" }
+# #   - { "k": "browscap", "v": "extra/browscap.ini" }
+# #   - { "k": "session.save_path", "v": ""/var/lib/php/sessions"" }
+# #   - { "k": "session.cookie_secure", "v": "" }
+# #   - { "k": "session.trans_sid_hosts=""", "v": "" }
+# #   - { "k": "session.upload_progress.enabled", "v": "On" }
+# #   - { "k": "session.upload_progress.cleanup", "v": "On" }
+# #   - { "k": "session.upload_progress.prefix", "v": ""upload_progress_"" }
+# #   - { "k": "session.upload_progress.name", "v": ""PHP_SESSION_UPLOAD_PROGRESS"" }
+# #   - { "k": "session.upload_progress.freq", "v": ""1%"" }
+# #   - { "k": "session.upload_progress.min_freq", "v": ""1"" }
+# #   - { "k": "session.lazy_write", "v": "On" }
+# #   - { "k": "assert.active", "v": "On" }
+# #   - { "k": "assert.exception", "v": "On" }
+# #   - { "k": "assert.warning", "v": "On" }
+# #   - { "k": "assert.bail", "v": "Off" }
+# #   - { "k": "assert.callback", "v": "0" }
+# #   - { "k": "assert.quiet_eval", "v": "0" }
+# #   - { "k": "com.typelib_file", "v": "" }
+# #   - { "k": "com.allow_dcom", "v": "true" }
+# #   - { "k": "com.autoregister_typelib", "v": "true" }
+# #   - { "k": "com.autoregister_casesensitive", "v": "false" }
+# #   - { "k": "com.autoregister_verbose", "v": "true" }
+# #   - { "k": "com.code_page=", "v": "" }
+# #   - { "k": "mbstring.language", "v": "Japanese" }
+# #   - { "k": "mbstring.internal_encoding", "v": "" }
+# #   - { "k": "mbstring.http_input", "v": "" }
+# #   - { "k": "mbstring.http_output", "v": "" }
+# #   - { "k": "mbstring.encoding_translation", "v": "Off" }
+# #   - { "k": "mbstring.detect_order", "v": "auto" }
+# #   - { "k": "mbstring.substitute_character", "v": "none" }
+# #   - { "k": "mbstring.func_overload", "v": "0" }
+# #   - { "k": "mbstring.strict_detection", "v": "On" }
+# #   - { "k": "mbstring.http_output_conv_mimetype=", "v": "" }
+# #   - { "k": "gd.jpeg_ignore_warning", "v": "1" }
+# #   - { "k": "exif.encode_unicode", "v": "ISO-8859-15" }
+# #   - { "k": "exif.decode_unicode_motorola", "v": "UCS-2BE" }
+# #   - { "k": "exif.decode_unicode_intel", "v": "UCS-2LE" }
+# #   - { "k": "exif.encode_jis", "v": "" }
+# #   - { "k": "exif.decode_jis_motorola", "v": "JIS" }
+# #   - { "k": "exif.decode_jis_intel", "v": "JIS" }
+# #   - { "k": "tidy.default_config", "v": "/usr/local/lib/php/default.tcfg" }
+# #   - { "k": "sysvshm.init_mem", "v": "10000" }
+# #   - { "k": "dba.default_handler=", "v": "" }
+# #   - { "k": "opcache.enable=1", "v": "" }
+# #   - { "k": "opcache.enable_cli=0", "v": "" }
+# #   - { "k": "opcache.memory_consumption=128", "v": "" }
+# #   - { "k": "opcache.interned_strings_buffer=8", "v": "" }
+# #   - { "k": "opcache.max_accelerated_files=10000", "v": "" }
+# #   - { "k": "opcache.max_wasted_percentage=5", "v": "" }
+# #   - { "k": "opcache.use_cwd=1", "v": "" }
+# #   - { "k": "opcache.validate_timestamps=1", "v": "" }
+# #   - { "k": "opcache.revalidate_freq=2", "v": "" }
+# #   - { "k": "opcache.revalidate_path=0", "v": "" }
+# #   - { "k": "opcache.save_comments=1", "v": "" }
+# #   - { "k": "opcache.enable_file_override=0", "v": "" }
+# #   - { "k": "opcache.optimization_level=0xffffffff", "v": "" }
+# #   - { "k": "opcache.inherited_hack=1", "v": "" }
+# #   - { "k": "opcache.dups_fix=0", "v": "" }
+# #   - { "k": "opcache.blacklist_filename=", "v": "" }
+# #   - { "k": "opcache.max_file_size=0", "v": "" }
+# #   - { "k": "opcache.consistency_checks=0", "v": "" }
+# #   - { "k": "opcache.force_restart_timeout=180", "v": "" }
+# #   - { "k": "opcache.error_log=", "v": "" }
+# #   - { "k": "opcache.log_verbosity_level=1", "v": "" }
+# #   - { "k": "opcache.preferred_memory_model=", "v": "" }
+# #   - { "k": "opcache.protect_memory=0", "v": "" }
+# #   - { "k": "opcache.restrict_api=", "v": "" }
+# #   - { "k": "opcache.mmap_base=", "v": "" }
+# #   - { "k": "opcache.file_cache=", "v": "" }
+# #   - { "k": "opcache.file_cache_only=0", "v": "" }
+# #   - { "k": "opcache.file_cache_consistency_checks=1", "v": "" }
+# #   - { "k": "opcache.file_cache_fallback=1", "v": "" }
+# #   - { "k": "opcache.huge_code_pages=1", "v": "" }
+# #   - { "k": "opcache.validate_permission=0", "v": "" }
+# #   - { "k": "opcache.validate_root=0", "v": "" }
+# #   - { "k": "opcache.opt_debug_level=0", "v": "" }
+# #   - { "k": "curl.cainfo", "v": "" }
+# #   - { "k": "openssl.cafile=", "v": "" }
+# #   - { "k": "openssl.capath=", "v": "" }
 
 
-#   - { "k": "unserialize_callback_func", "v": "" }
-#   - { "k": "disable_classes", "v": "" }
-#   - { "k": "variables_order", "v": ""GPCS"" }
-#   - { "k": "request_order", "v": ""GP"" }
-#   - { "k": "auto_prepend_file", "v": "" }
-#   - { "k": "auto_append_file", "v": "" }
-#   - { "k": "default_mimetype", "v": ""text/html"" }
-#   - { "k": "default_charset", "v": ""UTF-8"" }
-#   - { "k": "doc_root", "v": "" }
-#   - { "k": "user_dir", "v": "" }
-#   - { "k": "pdo_mysql.default_socket=", "v": "" }
-#   - { "k": "ibase.timestampformat", "v": ""%Y-%m-%d" }
-#   - { "k": "ibase.dateformat", "v": ""%Y-%m-%d"" }
-#   - { "k": "ibase.timeformat", "v": ""%H:%M:%S"" }
-#   - { "k": "mysqli.default_socket", "v": "" }
-#   - { "k": "mysqli.default_host", "v": "" }
-#   - { "k": "mysqli.default_user", "v": "" }
-#   - { "k": "mysqli.default_pw", "v": "" }
-#   - { "k": "session.cookie_domain", "v": "" }
-#   - { "k": "session.cookie_httponly", "v": "" }
-#   - { "k": "session.referer_check", "v": "" }
-#   - { "k": "session.trans_sid_tags", "v": ""a=href,area=href,frame=src,form="" }
-#   - { "k": "soap.wsdl_cache_enabled=1", "v": "" }
-#   - { "k": "soap.wsdl_cache_dir="/tmp"", "v": "" }
-#   - { "k": "soap.wsdl_cache_ttl=86400", "v": "" }
-
-
-#   - { "k": "user_ini.filename", "v": "".user.ini"" }
-#   - { "k": "user_ini.filename", "v": "" }
-#   - { "k": "user_ini.cache_ttl", "v": "300" }
-#   - { "k": "output_handler", "v": "" }
-#   - { "k": "url_rewriter.tags", "v": "" }
-#   - { "k": "url_rewriter.hosts", "v": "" }
-#   - { "k": "zlib.output_compression_level", "v": "-1" }
-#   - { "k": "zlib.output_handler", "v": "" }
-#   - { "k": "open_basedir", "v": "" }
-#   - { "k": "highlight.string", "v": "#DD0000" }
-#   - { "k": "highlight.comment", "v": "#FF9900" }
-#   - { "k": "highlight.keyword", "v": "#007700" }
-#   - { "k": "highlight.default", "v": "#0000BB" }
-#   - { "k": "highlight.html", "v": "#000000" }
-#   - { "k": "ignore_user_abort", "v": "On" }
-#   - { "k": "realpath_cache_size", "v": "4096k" }
-#   - { "k": "realpath_cache_ttl", "v": "120" }
-#   - { "k": "zend.multibyte", "v": "Off" }
-#   - { "k": "zend.script_encoding", "v": "" }
-#   - { "k": "max_input_nesting_level", "v": "64" }
-#   - { "k": "report_zend_debug", "v": "0" }
-#   - { "k": "track_errors", "v": "Off" }
-#   - { "k": "xmlrpc_errors", "v": "0" }
-#   - { "k": "xmlrpc_error_number", "v": "0" }
-#   - { "k": "docref_root", "v": ""/phpmanual/"" }
-#   - { "k": "docref_ext", "v": ".html" }
-#   - { "k": "error_prepend_string", "v": ""<span" }
-#   - { "k": "error_append_string", "v": ""</span>"" }
-#   - { "k": "error_log", "v": "php_errors.log" }
-#   - { "k": "error_log", "v": "syslog" }
-#   - { "k": "windows.show_crt_warning", "v": "" }
-#   - { "k": "arg_separator.output", "v": ""&amp;"" }
-#   - { "k": "arg_separator.input", "v": "";&"" }
-#   - { "k": "enable_post_data_reading", "v": "Off" }
-#   - { "k": "internal_encoding", "v": "" }
-#   - { "k": "input_encoding", "v": "" }
-#   - { "k": "output_encoding", "v": "" }
-#   - { "k": "include_path", "v": "".:/usr/share/php"" }
-#   - { "k": "include_path", "v": "".;c:\php\includes"" }
-#   - { "k": "cgi.force_redirect", "v": "1" }
-#   - { "k": "cgi.nph", "v": "1" }
-#   - { "k": "cgi.redirect_status_env", "v": "" }
-#   - { "k": "cgi.fix_pathinfo=1", "v": "" }
-#   - { "k": "cgi.discard_path=1", "v": "" }
-#   - { "k": "fastcgi.impersonate", "v": "1" }
-#   - { "k": "fastcgi.logging", "v": "0" }
-#   - { "k": "cgi.rfc2616_headers", "v": "0" }
-#   - { "k": "cgi.check_shebang_line=1", "v": "" }
-#   - { "k": "upload_tmp_dir", "v": "" }
-#   - { "k": "from="john@doe.com"", "v": "" }
-#   - { "k": "user_agent="PHP"", "v": "" }
-#   - { "k": "auto_detect_line_endings", "v": "Off" }
-#   - { "k": "extension=bz2", "v": "" }
-#   - { "k": "extension=curl", "v": "" }
-#   - { "k": "extension=fileinfo", "v": "" }
-#   - { "k": "extension=gd2", "v": "" }
-#   - { "k": "extension=gettext", "v": "" }
-#   - { "k": "extension=gmp", "v": "" }
-#   - { "k": "extension=intl", "v": "" }
-#   - { "k": "extension=imap", "v": "" }
-#   - { "k": "extension=interbase", "v": "" }
-#   - { "k": "extension=ldap", "v": "" }
-#   - { "k": "extension=mbstring", "v": "" }
-#   - { "k": "extension=exif", "v": "Must" }
-#   - { "k": "extension=mysqli", "v": "" }
-#   - { "k": "extension=oci8_12c", "v": "Use" }
-#   - { "k": "extension=odbc", "v": "" }
-#   - { "k": "extension=openssl", "v": "" }
-#   - { "k": "extension=pdo_firebird", "v": "" }
-#   - { "k": "extension=pdo_mysql", "v": "" }
-#   - { "k": "extension=pdo_oci", "v": "" }
-#   - { "k": "extension=pdo_odbc", "v": "" }
-#   - { "k": "extension=pdo_pgsql", "v": "" }
-#   - { "k": "extension=pdo_sqlite", "v": "" }
-#   - { "k": "extension=pgsql", "v": "" }
-#   - { "k": "extension=shmop", "v": "" }
-#   - { "k": "extension=snmp", "v": "" }
-#   - { "k": "extension=soap", "v": "" }
-#   - { "k": "extension=sockets", "v": "" }
-#   - { "k": "extension=sqlite3", "v": "" }
-#   - { "k": "extension=tidy", "v": "" }
-#   - { "k": "extension=xmlrpc", "v": "" }
-#   - { "k": "extension=xsl", "v": "" }
-#   - { "k": "date.timezone", "v": "" }
-#   - { "k": "date.default_latitude", "v": "31.7667" }
-#   - { "k": "date.default_longitude", "v": "35.2333" }
-#   - { "k": "date.sunrise_zenith", "v": "90.583333" }
-#   - { "k": "date.sunset_zenith", "v": "90.583333" }
-#   - { "k": "filter.default", "v": "unsafe_raw" }
-#   - { "k": "filter.default_flags", "v": "" }
-#   - { "k": "iconv.input_encoding", "v": "" }
-#   - { "k": "iconv.internal_encoding", "v": "" }
-#   - { "k": "iconv.output_encoding", "v": "" }
-#   - { "k": "imap.enable_insecure_rsh=0", "v": "" }
-#   - { "k": "intl.default_locale", "v": "" }
-#   - { "k": "intl.error_level", "v": "E_WARNING" }
-#   - { "k": "intl.use_exceptions", "v": "0" }
-#   - { "k": "sqlite3.extension_dir", "v": "" }
-#   - { "k": "PCRE", "v": "backtracking" }
-#   - { "k": "pcre.backtrack_limit=100000", "v": "" }
-#   - { "k": "PCRE", "v": "recursion" }
-#   - { "k": "Please", "v": "that" }
-#   - { "k": "the", "v": "process" }
-#   - { "k": "stack", "v": "limit" }
-#   - { "k": "pcre.recursion_limit=100000", "v": "" }
-#   - { "k": "Enables", "v": "disables" }
-#   - { "k": "library", "v": "be" }
-#   - { "k": "pcre.jit=1", "v": "" }
-#   - { "k": "pdo_odbc.connection_pooling=strict", "v": "" }
-#   - { "k": "pdo_odbc.db2_instance_name", "v": "" }
-#   - { "k": "phar.readonly", "v": "On" }
-#   - { "k": "phar.require_hash", "v": "On" }
-#   - { "k": "phar.cache_list", "v": "" }
-#   - { "k": "sendmail_from", "v": "me@example.com" }
-#   - { "k": "sendmail_path", "v": "" }
-#   - { "k": "mail.force_extra_parameters", "v": "" }
-#   - { "k": "mail.log", "v": "" }
-#   - { "k": "mail.log", "v": "syslog" }
-#   - { "k": "odbc.default_db", "v": "Not" }
-#   - { "k": "odbc.default_user", "v": "Not" }
-#   - { "k": "odbc.default_pw", "v": "Not" }
-#   - { "k": "odbc.default_cursortype", "v": "" }
-#   - { "k": "birdstep.max_links", "v": "-1" }
-#   - { "k": "ibase.default_db", "v": "" }
-#   - { "k": "ibase.default_user", "v": "" }
-#   - { "k": "ibase.default_password", "v": "" }
-#   - { "k": "ibase.default_charset", "v": "" }
-#   - { "k": "mysqli.allow_local_infile", "v": "On" }
-#   - { "k": "mysqlnd.debug", "v": "" }
-#   - { "k": "mysqlnd.log_mask", "v": "0" }
-#   - { "k": "mysqlnd.mempool_default_size", "v": "16000" }
-#   - { "k": "mysqlnd.net_cmd_buffer_size", "v": "2048" }
-#   - { "k": "mysqlnd.net_read_buffer_size", "v": "32768" }
-#   - { "k": "mysqlnd.net_read_timeout", "v": "31536000" }
-#   - { "k": "mysqlnd.sha256_server_public_key", "v": "" }
-#   - { "k": "oci8.privileged_connect", "v": "Off" }
-#   - { "k": "oci8.max_persistent", "v": "-1" }
-#   - { "k": "oci8.persistent_timeout", "v": "-1" }
-#   - { "k": "oci8.ping_interval", "v": "60" }
-#   - { "k": "oci8.connection_class", "v": "" }
-#   - { "k": "oci8.events", "v": "Off" }
-#   - { "k": "oci8.statement_cache_size", "v": "20" }
-#   - { "k": "oci8.default_prefetch", "v": "100" }
-#   - { "k": "oci8.old_oci_close_semantics", "v": "Off" }
-#   - { "k": "browscap", "v": "extra/browscap.ini" }
-#   - { "k": "session.save_path", "v": ""/var/lib/php/sessions"" }
-#   - { "k": "session.cookie_secure", "v": "" }
-#   - { "k": "session.trans_sid_hosts=""", "v": "" }
-#   - { "k": "session.upload_progress.enabled", "v": "On" }
-#   - { "k": "session.upload_progress.cleanup", "v": "On" }
-#   - { "k": "session.upload_progress.prefix", "v": ""upload_progress_"" }
-#   - { "k": "session.upload_progress.name", "v": ""PHP_SESSION_UPLOAD_PROGRESS"" }
-#   - { "k": "session.upload_progress.freq", "v": ""1%"" }
-#   - { "k": "session.upload_progress.min_freq", "v": ""1"" }
-#   - { "k": "session.lazy_write", "v": "On" }
-#   - { "k": "assert.active", "v": "On" }
-#   - { "k": "assert.exception", "v": "On" }
-#   - { "k": "assert.warning", "v": "On" }
-#   - { "k": "assert.bail", "v": "Off" }
-#   - { "k": "assert.callback", "v": "0" }
-#   - { "k": "assert.quiet_eval", "v": "0" }
-#   - { "k": "com.typelib_file", "v": "" }
-#   - { "k": "com.allow_dcom", "v": "true" }
-#   - { "k": "com.autoregister_typelib", "v": "true" }
-#   - { "k": "com.autoregister_casesensitive", "v": "false" }
-#   - { "k": "com.autoregister_verbose", "v": "true" }
-#   - { "k": "com.code_page=", "v": "" }
-#   - { "k": "mbstring.language", "v": "Japanese" }
-#   - { "k": "mbstring.internal_encoding", "v": "" }
-#   - { "k": "mbstring.http_input", "v": "" }
-#   - { "k": "mbstring.http_output", "v": "" }
-#   - { "k": "mbstring.encoding_translation", "v": "Off" }
-#   - { "k": "mbstring.detect_order", "v": "auto" }
-#   - { "k": "mbstring.substitute_character", "v": "none" }
-#   - { "k": "mbstring.func_overload", "v": "0" }
-#   - { "k": "mbstring.strict_detection", "v": "On" }
-#   - { "k": "mbstring.http_output_conv_mimetype=", "v": "" }
-#   - { "k": "gd.jpeg_ignore_warning", "v": "1" }
-#   - { "k": "exif.encode_unicode", "v": "ISO-8859-15" }
-#   - { "k": "exif.decode_unicode_motorola", "v": "UCS-2BE" }
-#   - { "k": "exif.decode_unicode_intel", "v": "UCS-2LE" }
-#   - { "k": "exif.encode_jis", "v": "" }
-#   - { "k": "exif.decode_jis_motorola", "v": "JIS" }
-#   - { "k": "exif.decode_jis_intel", "v": "JIS" }
-#   - { "k": "tidy.default_config", "v": "/usr/local/lib/php/default.tcfg" }
-#   - { "k": "sysvshm.init_mem", "v": "10000" }
-#   - { "k": "dba.default_handler=", "v": "" }
-#   - { "k": "opcache.enable=1", "v": "" }
-#   - { "k": "opcache.enable_cli=0", "v": "" }
-#   - { "k": "opcache.memory_consumption=128", "v": "" }
-#   - { "k": "opcache.interned_strings_buffer=8", "v": "" }
-#   - { "k": "opcache.max_accelerated_files=10000", "v": "" }
-#   - { "k": "opcache.max_wasted_percentage=5", "v": "" }
-#   - { "k": "opcache.use_cwd=1", "v": "" }
-#   - { "k": "opcache.validate_timestamps=1", "v": "" }
-#   - { "k": "opcache.revalidate_freq=2", "v": "" }
-#   - { "k": "opcache.revalidate_path=0", "v": "" }
-#   - { "k": "opcache.save_comments=1", "v": "" }
-#   - { "k": "opcache.enable_file_override=0", "v": "" }
-#   - { "k": "opcache.optimization_level=0xffffffff", "v": "" }
-#   - { "k": "opcache.inherited_hack=1", "v": "" }
-#   - { "k": "opcache.dups_fix=0", "v": "" }
-#   - { "k": "opcache.blacklist_filename=", "v": "" }
-#   - { "k": "opcache.max_file_size=0", "v": "" }
-#   - { "k": "opcache.consistency_checks=0", "v": "" }
-#   - { "k": "opcache.force_restart_timeout=180", "v": "" }
-#   - { "k": "opcache.error_log=", "v": "" }
-#   - { "k": "opcache.log_verbosity_level=1", "v": "" }
-#   - { "k": "opcache.preferred_memory_model=", "v": "" }
-#   - { "k": "opcache.protect_memory=0", "v": "" }
-#   - { "k": "opcache.restrict_api=", "v": "" }
-#   - { "k": "opcache.mmap_base=", "v": "" }
-#   - { "k": "opcache.file_cache=", "v": "" }
-#   - { "k": "opcache.file_cache_only=0", "v": "" }
-#   - { "k": "opcache.file_cache_consistency_checks=1", "v": "" }
-#   - { "k": "opcache.file_cache_fallback=1", "v": "" }
-#   - { "k": "opcache.huge_code_pages=1", "v": "" }
-#   - { "k": "opcache.validate_permission=0", "v": "" }
-#   - { "k": "opcache.validate_root=0", "v": "" }
-#   - { "k": "opcache.opt_debug_level=0", "v": "" }
-#   - { "k": "curl.cainfo", "v": "" }
-#   - { "k": "openssl.cafile=", "v": "" }
-#   - { "k": "openssl.capath=", "v": "" }
+pool:
+  www:
+    # prefix: "/path/to/pools/$pool"
+    user: "www-data"
+    group: "www-data"
+    listen: "/run/php/php7.2-fpm.sock"
+    # listen.backlog: "511"
+    listen.owner: "www-data"
+    listen.group: "www-data"
+    # listen.mode: "0660"
+    # listen.acl_users ="
+    # listen.acl_groups ="
+    # listen.allowed_clients: "127.0.0.1"
+    pm: "dynamic"
+    pm.max_children: "5"
+    pm.start_servers: "2"
+    pm.min_spare_servers: "1"
+    pm.max_spare_servers: "3"
+    # pm.process_idle_timeout: "10s# pm.max_requests: "500"
+    # pm.status_path: "/status"
+    # ping.path: "/ping"
+    # ping.response: "pong"
+    # access.log: "log/$pool.access.log"
+    # access.format: ""%R - %u %t \"%m %r%Q%q\" %s %f %{mili}d %{kilo}M %C%%""
+    # slowlog: "log/$pool.log.slow"
+    # request_slowlog_timeout: "0"
+    # request_slowlog_trace_depth: "20"
+    # request_terminate_timeout: "0"
+    # rlimit_files: "1024"
+    # rlimit_core: "0"
+    # chroot ="
+    # chdir: "/var/www"
+    # catch_workers_output: "yes"
+    # clear_env: "no"
+    # security.limit_extensions: ".php .php3 .php4 .php5 .php7"
+    # env[HOSTNAME]: "$HOSTNAME"
+    # env[PATH]: "/usr/local/bin:/usr/bin:/bin"
+    # env[TMP]: "/tmp"
+    # env[TMPDIR]: "/tmp"
+    # env[TEMP]: "/tmp"
+    # php_admin_value[sendmail_path]: "/usr/sbin/sendmail -t -i -f www@my.domain.com"
+    # php_flag[display_errors]: "off"
+    # php_admin_value[error_log]: "/var/log/fpm-php.www.log"
+    # php_admin_flag[log_errors]: "on"
+    # php_admin_value[memory_limit]: "32M"

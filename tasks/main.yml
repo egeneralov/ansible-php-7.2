@@ -17,8 +17,15 @@
   with_items: "{{ php_ini }}"
   register: php_ini_result
 
+- name: Place pools
+  template:
+    src: "pool.conf.j2"
+    dest: "/etc/php/7.2/fpm/pool.d/{{ item.key }}.conf"
+  with_dict: "{{ pool }}"
+  register: php_pool_result
+
 - name: Restart php-fpm
   systemd:
     name: "php7.2-fpm.service"
     state: restarted
-  when: php_ini_result is changed
+  when: php_ini_result is changed or php_pool_result is changed
