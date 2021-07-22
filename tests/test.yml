@@ -1,0 +1,5 @@
+---
+
+- hosts: php
+  roles:
+    - egeneralov.ansible_php_7_2

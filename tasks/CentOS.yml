@@ -1,0 +1,93 @@
+---
+
+- name: "install : release"
+  get_url:
+    url: "http://rpms.remirepo.net/enterprise/remi-release-{{ ansible_facts['distribution_major_version'] }}.rpm"
+    dest: "/opt/remi-release-{{ ansible_facts['distribution_major_version'] }}.rpm"
+
+- name: "install : repository"
+  yum:
+    name: "/opt/remi-release-{{ ansible_facts['distribution_major_version'] }}.rpm"
+    state: present
+
+- name: "install : php"
+  yum:
+    state: latest
+    name: 
+      - php72
+      # - php72-php-zstd-devel
+      - php72-runtime
+      # - php72-scldevel
+      - php72-build
+      - php72-libzip
+      - php72-php
+      - php72-php-ast
+      - php72-php-bcmath
+      - php72-php-brotli
+      - php72-php-cli
+      - php72-php-common
+      - php72-php-componere
+      # - php72-php-dba
+      # - php72-php-devel
+      # - php72-php-embedded
+      - php72-php-enchant
+      - php72-php-fpm
+      - php72-php-gd
+      - php72-php-geos
+      - php72-php-gmp
+      # - php72-php-horde-horde-lz4
+      - php72-php-imap
+      - php72-php-interbase
+      - php72-php-intl
+      - php72-php-ioncube-loader
+      - php72-php-json
+      - php72-php-ldap
+      # - php72-php-libvirt
+      # - php72-php-libvirt-doc
+      - php72-php-litespeed
+      - php72-php-lz4
+      - php72-php-maxminddb
+      - php72-php-mbstring
+      - php72-php-mysqlnd
+      - php72-php-oci8
+      # - php72-php-odbc
+      - php72-php-opcache
+      - php72-php-pdlib
+      - php72-php-pdo
+      - php72-php-pdo-dblib
+      - php72-php-pear
+      - php72-php-pggi
+      - php72-php-pgsql
+      # - php72-php-phalcon3
+      # - php72-php-phalcon4
+      - php72-php-phpiredis
+      - php72-php-pinba
+      - php72-php-process
+      - php72-php-pspell
+      - php72-php-realpath-turbo
+      - php72-php-recode
+      - php72-php-smbclient
+      - php72-php-snappy
+      - php72-php-snmp
+      - php72-php-snuffleupagus
+      - php72-php-soap
+      - php72-php-sodium
+      # - php72-php-sqlsrv
+      - php72-php-tarantool
+      - php72-php-tidy
+      - php72-php-wkhtmltox
+      - php72-php-xml
+      - php72-php-xmlrpc
+      - php72-php-xz
+      - php72-php-zstd
+      - php72-unit-php
+      - php72-xhprof
+
+
+- name: "install : pecl"
+  yum:
+    state: latest
+    name: 
+      - php72-php-pecl-amqp
+      - php72-php-pecl-propro
+      - php72-php-pecl-raphf

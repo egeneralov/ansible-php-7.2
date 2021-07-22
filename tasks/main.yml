@@ -2,14 +2,18 @@
 
 - include_tasks: "{{ yml_file }}.yml"
   with_items:
-    - install-php
-    - pecl
+    - "{{ ansible_facts['distribution'] }}"
     - composer
   loop_control:
     loop_var: yml_file
 
+- file:
+    path: /run/php
+    state: directory
+
 - name: php.ini
   lineinfile:
+    path: "{{ _base_path[ansible_facts['distribution']] }}/php.ini"
     path: "/etc/php/7.2/fpm/php.ini"
     regexp: ';?{{ item.k }} =.*'
     line: '{{ item.k }} = {{ item.v }}'
@@ -20,12 +24,13 @@
 - name: Place pools
   template:
     src: "pool.conf.j2"
-    dest: "/etc/php/7.2/fpm/pool.d/{{ item.key }}.conf"
+    # dest: "/etc/php/7.2/fpm/pool.d/{{ item.key }}.conf"
+    dest: "{{ _base_path[ansible_facts['distribution']] }}/{{ _pool_subpath[ansible_facts['distribution']] }}/{{ item.key }}.conf"
   with_dict: "{{ pool }}"
   register: php_pool_result
 
 - name: Restart php-fpm
   systemd:
-    name: "php7.2-fpm.service"
+    name: "{{ _service[ansible_facts['distribution']] }}"
     state: restarted
   when: php_ini_result is changed or php_pool_result is changed

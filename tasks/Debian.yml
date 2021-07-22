@@ -71,3 +71,23 @@
       - php7.2-xmlrpc
       - php7.2-xsl
       - php7.2-zip
+
+- name: pecl install
+  shell: "yes '' | pecl install {{ item.n }}"
+  args:
+    creates: "/usr/lib/php/20170718/{{ item.l | default(item.n) }}.so"
+  with_items:
+    - { "n": "amqp", "l": "amqp" }
+    - { "n": "raphf", "l": "raphf" }
+    - { "n": "propro", "l": "propro" }
+
+- name: Add extensions to autoload
+  lineinfile:
+    create: yes
+    path: "/etc/php/7.2/cli/conf.d/20-{{ item }}.ini"
+    line: "extension={{ item }}.so"
+    state: present
+  with_items:
+    - amqp
+    - raphf
+    - propro
